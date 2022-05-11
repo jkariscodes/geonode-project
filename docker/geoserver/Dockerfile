@@ -92,7 +92,9 @@ RUN apt-get update \
     && chmod +x /usr/local/tomcat/tmp/setup_auth.sh \
     && chmod +x /usr/local/tomcat/tmp/entrypoint.sh \
     && pip3 install pip==9.0.3 \
-    && pip3 install -r requirements.txt
+    && pip3 install -r requirements.txt \
+    && chmod +x /usr/local/tomcat/tmp/get_dockerhost_ip.py \
+    && chmod +x /usr/local/tomcat/tmp/get_nginxhost_ip.py
 
 RUN pip install j2cli
 
